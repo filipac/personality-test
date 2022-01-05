@@ -10,6 +10,19 @@ jobs:
   laravel-tests:
 
     runs-on: ubuntu-latest
+    
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL DATABASE: test database
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_USER: admin
+          MYSQL PASSWORD: rootpass
+          MYSQL ROOT PASSWORD: rootpass
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s--health-retries=3
 
     steps:
     - uses: shivammathur/setup-php@2.16.0
