@@ -15,11 +15,11 @@ jobs:
       mysql:
         image: mysql:latest
         env:
-          MYSQL DATABASE: test database
+          MYSQL_DATABASE: test_database
           MYSQL_HOST: 127.0.0.1
           MYSQL_USER: admin
-          MYSQL PASSWORD: rootpass
-          MYSQL ROOT PASSWORD: rootpass
+          MYSQL_PASSWORD: rootpass
+          MYSQL_ROOT_PASSWORD: rootpass
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=10
