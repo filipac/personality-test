@@ -3,6 +3,9 @@
 The JS files are pre-compiled to avoid installing node_modules and compiling locally.
 To compile the JS and CSS assets, run `npm install` and `npm run dev`.
 
+### Live Demo
+You can check out a demo of this simple app here: [https://personality-test.pacurar.dev/](https://personality-test.pacurar.dev/)
+
 ### Requirements
 - The application requires at least PHP 8.1 to run locally. 8.0 should work but not supported.
 
