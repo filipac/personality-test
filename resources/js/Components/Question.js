@@ -123,7 +123,7 @@ export const Question = ({questions, question, questionIndex, ...quiz}) => {
                 </div>
             </div>)}
         </div>
-        <div className={'w-full flex justify-between'}>
+        <div className={'w-full flex justify-between mt-4 md:mt-0'}>
             <div>
                 <button type="button"
                         className={classNames(
