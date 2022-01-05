@@ -17,3 +17,32 @@ To compile the JS and CSS assets, run `npm install` and `npm run dev`.
 ### Running the app in development/testing
 - `php artisan serve`
 - Visit http://localhost:8000
+
+
+### Unit testing
+
+The application uses [Pest PHP](https://pestphp.com) for Unit Testing.
+
+Seeders are automatically run before each test that interacts with data.
+The database is refreshed before each test.
+
+Tests are located in `tests/Unit`.
+
+To run the tests, type the following command into the terminal:
+
+`php artisan test`
+
+Example response:
+```
+   PASS  Tests\Unit\EndpointTest
+  ✓ results are returned by the controller
+  ✓ visiting the results page without post method returns a redirect to quiz
+
+   PASS  Tests\Unit\OutcomeTest
+  ✓ outcome can be introvert
+  ✓ outcome can be extrovert
+  ✓ ties are set to last response result
+
+  Tests:  5 passed
+  Time:   0.17s
+```

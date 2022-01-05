@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', \App\Http\Controllers\Pages\RootPageController::class);
+Route::get('/quiz', \App\Http\Controllers\Pages\QuizPageController::class);
+Route::get('/results', function() {
+    return redirect()->to('/quiz');
+});
+Route::post('results', \App\Http\Controllers\Pages\ResultsPageController::class);
 
 //Route::get('/dashboard', function () {
 //    return Inertia::render('Dashboard');
