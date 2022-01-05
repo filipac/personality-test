@@ -6,7 +6,7 @@ To compile the JS and CSS assets, run `npm install` and `npm run dev`.
 ### Live Demo
 You can check out a demo of this simple app here: [https://personality-test.pacurar.dev/](https://personality-test.pacurar.dev/)
 
-The backend/admin interface is at [https://personality-test.pacurar.dev/admin/](https://personality-test.pacurar.dev/admin/).
+The backend/admin interface is at [https://personality-test.pacurar.dev/backend/](https://personality-test.pacurar.dev/backend/).
 
 You can log in using email `demo@demo.com` and password `password`
 
@@ -31,7 +31,7 @@ You can log in using email `demo@demo.com` and password `password`
 ### Creating an admin user via CLI
 
 - Run `php artisan make:filament-user`
-- Log in with the newly created user in `/admin` path
+- Log in with the newly created user in `/backend` path
 
 ### Running the app in development/testing
 - `php artisan serve`
