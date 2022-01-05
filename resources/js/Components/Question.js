@@ -58,7 +58,7 @@ const FutureQuestion = ({number}) => {
             className="group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400"
         >
                   <span
-                      className="h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300"
+                      className="h-2.5 w-2.5 bg-transparent rounded-full md:group-hover:bg-gray-300"
                       aria-hidden="true"
                   />
             <span className="sr-only">Question {number}</span>
@@ -98,7 +98,7 @@ export const Question = ({questions, question, questionIndex, ...quiz}) => {
             <div className={'font-semibold text-xl text-center'}>{question.question}</div>
             {question.answers.map((answer, idx) => <div key={answer.id}
                                                         className={classNames(
-                                                            results[question.id] === answer.id ? 'bg-primary' : 'bg-white hover:bg-primary',
+                                                            results[question.id] === answer.id ? 'bg-primary' : 'bg-white md:hover:bg-primary',
                                                             idx > 0 ? 'mt-2' : 'mt-12',
                                                             'p-4 rounded flex items-center group cursor-pointer',
                                                         )}
@@ -110,13 +110,13 @@ export const Question = ({questions, question, questionIndex, ...quiz}) => {
                                                             }))
                                                         }}>
                 <div className={''}>
-                    <input type="radio" className={'group-hover:hidden'} onChange={e => {
+                    <input type="radio" className={'md:group-hover:hidden'} onChange={e => {
                     }} checked={results[question.id] === answer.id} />
-                    <input type="radio" className={'hidden group-hover:inline-block bg-white ring-0'} onChange={e => {
+                    <input type="radio" className={'hidden md:group-hover:inline-block bg-white ring-0'} onChange={e => {
                     }} checked />
                 </div>
                 <div className={classNames(
-                    'flex-1 ml-2 text-lg group-hover:text-white group-hover:font-bold',
+                    'flex-1 ml-2 text-lg md:group-hover:text-white md:group-hover:font-bold',
                     results[question.id] === answer.id ? 'text-white font-bold' : '',
                 )}>
                     {answer.answer}
@@ -128,7 +128,7 @@ export const Question = ({questions, question, questionIndex, ...quiz}) => {
                 <button type="button"
                         className={classNames(
                             'inline-flex items-center transition px-6 py-3 border border-transparent rounded-md shadow-sm text-md transition focus:outline-none',
-                            questionIndex > 0 ? 'bg-primary hover:bg-primary-darken text-white' : 'cursor-not-allowed bg-gray-200 text-gray-400',
+                            questionIndex > 0 ? 'bg-primary md:hover:bg-primary-darken text-white' : 'cursor-not-allowed bg-gray-200 text-gray-400',
                         )}
                         onClick={e => {
                             e.preventDefault()
@@ -144,7 +144,7 @@ export const Question = ({questions, question, questionIndex, ...quiz}) => {
                 <button type="button"
                         className={classNames(
                             'inline-flex transition items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-md transition focus:outline-none',
-                            results[question.id] ? 'bg-primary hover:bg-primary-darken text-white' : 'cursor-not-allowed bg-gray-200 text-gray-400',
+                            results[question.id] ? 'bg-primary md:hover:bg-primary-darken text-white' : 'cursor-not-allowed bg-gray-200 text-gray-400',
                         )}
                         onClick={e => {
                             e.preventDefault()
